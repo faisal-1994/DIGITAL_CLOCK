@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital_Clock/title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+
+    <!-- taking div to hold digital watch and input imported by DOM manipulation -->
+
+    <div id="clock" class="div">
+
+        <div id="time"></div>
+        <div id="min"></div>
+        <div id="sec"></div>
+
+    </div>
+   
+
+    <script>
+
+    function dig_wtc(){
+
+    let  mainTime= new Date();
+    let hours = mainTime.getHours();
+    let mins = mainTime.getMinutes();
+    let secs = mainTime.getSeconds();
+
+    document.getElementById("time").innerHTML=hours;
+    document.getElementById("min").innerHTML=mins;
+    document.getElementById("sec").innerHTML=secs;
+  
+  
+    };
+     
+    // function has been called..
+
+    dig_wtc();
+
+    //setInterval executes dig_wtc() in every seconds..
+    
+    setInterval(dig_wtc,1000);
+
+    
+   
+
+    </script>
+    
+</body>
+</html>
